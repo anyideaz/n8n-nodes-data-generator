@@ -53,6 +53,6 @@
 	},
 	"dependencies": {
 		"@coderzz/mocker-data-generator": "^3.0.5",
-		"@faker-js/faker": "^7.6.0"
+		"@faker-js/faker": "^8.4.1"
 	}
 }

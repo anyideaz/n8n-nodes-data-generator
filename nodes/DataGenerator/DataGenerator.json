@@ -6,9 +6,13 @@
 	"resources": {
 		"primaryDocumentation": [
 			{
-				"url": "https://ketnoiso.net/data-generator"
+				"url": "https://www.npmjs.com/package/n8n-nodes-data-generator"
 			}
 		],
-		"generic": []
+		"generic": [
+			{
+				"url": "https://www.npmjs.com/package/n8n-nodes-data-generator"
+			}
+		]
 	}
 }
