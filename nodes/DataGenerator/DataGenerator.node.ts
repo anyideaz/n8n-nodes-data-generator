@@ -3,6 +3,7 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+	NodeConnectionType,
 } from 'n8n-workflow';
 import { faker as fakerEn } from '@faker-js/faker/locale/en';
 import { faker as fakerDe } from '@faker-js/faker/locale/de';
@@ -32,8 +33,8 @@ export class DataGenerator implements INodeType {
 		defaults: {
 			name: 'Data Generator',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionType.Main],
+		outputs: [NodeConnectionType.Main],
 		properties: [
 			{
 				displayName:
