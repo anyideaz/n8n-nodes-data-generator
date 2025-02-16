@@ -1,58 +1,57 @@
 {
-  "name": "n8n-nodes-<...>",
-  "version": "0.1.0",
-  "description": "",
-  "keywords": [
-    "n8n-community-node-package"
-  ],
-  "license": "MIT",
-  "homepage": "",
-  "author": {
-    "name": "",
-    "email": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
-  },
-  "engines": {
-    "node": ">=18.10",
-    "pnpm": ">=9.1"
-  },
-  "packageManager": "pnpm@9.1.4",
-  "main": "index.js",
-  "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "build": "tsc && gulp build:icons",
-    "dev": "tsc --watch",
-    "format": "prettier nodes credentials --write",
-    "lint": "eslint nodes credentials package.json",
-    "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
-  },
-  "files": [
-    "dist"
-  ],
-  "n8n": {
-    "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
-    ],
-    "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
-    ]
-  },
-  "devDependencies": {
-    "@typescript-eslint/parser": "^7.15.0",
-    "eslint": "^8.56.0",
-    "eslint-plugin-n8n-nodes-base": "^1.16.1",
-    "gulp": "^4.0.2",
+	"name": "n8n-nodes-data-generator",
+	"version": "1.1.0",
+	"description": "Generate mock data using Faker.js",
+	"keywords": [
+		"n8n-community-node-package",
+		"data-generator",
+		"faker.js",
+		"mock",
+		"n8n"
+	],
+	"license": "MIT",
+	"homepage": "https://sqldatagenerator.com",
+	"author": {
+		"name": "coderzz",
+		"email": "blueberry267@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/anyideaz/n8n-nodes-data-generator.git"
+	},
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc && gulp build:icons",
+		"dev": "tsc --watch",
+		"format": "prettier nodes --write",
+		"lint": "eslint nodes package.json",
+		"lintfix": "eslint nodes package.json --fix",
+		"prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes package.json"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"categories": [
+			"Development"
+		],
+		"nodes": [
+			"dist/nodes/DataGenerator/DataGenerator.node.js"
+		]
+	},
+	"devDependencies": {
+		"@typescript-eslint/parser": "~5.45",
+		"eslint-plugin-n8n-nodes-base": "^1.11.0",
+		"gulp": "^4.0.2",
     "prettier": "^3.3.2",
     "typescript": "^5.5.3"
-  },
-  "peerDependencies": {
-    "n8n-workflow": "*"
-  }
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"dependencies": {
+		"@coderzz/mocker-data-generator": "^3.0.5",
+		"@faker-js/faker": "^8.4.1"
+	}
 }
