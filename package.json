@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-data-generator",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Generate mock data using Faker.js",
 	"keywords": [
 		"n8n-community-node-package",
