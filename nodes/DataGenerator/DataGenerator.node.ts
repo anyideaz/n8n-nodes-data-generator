@@ -288,9 +288,9 @@ export class DataGenerator implements INodeType {
 				}
 			} else if (mode === 'simple') {
 				const simpleInput = this.getNodeParameter('simpleInput', i) as string;
-				const originalFieldNames = simpleInput.split('\n').map((name) => name.trim());
-				const normalizedFieldNames = originalFieldNames.map((name) => {
-					const [fieldName, rule] = name.split(':');
+				const normalizedFieldNames = simpleInput.split('\n').map((name) => {
+					const [fieldName, ...ruleParts] = name.split(':');
+					const rule = ruleParts.join(':');
 					return {
 						fieldName: fieldName.trim(),
 						rule: rule ? rule.trim().replace('()', '') : null,
